@@ -38,8 +38,15 @@ public class HomeRadio {
         this.maxRadioStation = maxRadioStation;
     }
 
+    public int getCurrentRadioStation() {
+        return currentRadioStation;
+    }
 
-    public void setCurrentVolume(int currentVolume) {
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public void setCurrentVolume() {
         if (currentVolume >= maxVolume) {
             this.currentVolume = maxVolume;
             return;
@@ -95,7 +102,7 @@ public class HomeRadio {
         }
     }
 
-    public void setCurrentRadioStation(int currentRadioStation) {
+    public void setCurrentRadioStation() {
 
         if (currentRadioStation > maxRadioStation) {
             this.currentRadioStation = maxRadioStation;
