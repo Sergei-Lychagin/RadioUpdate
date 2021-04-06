@@ -2,33 +2,42 @@ package ru.netology.domain;
 
 
 public class HomeRadio {
-    private int minVolume;
-    private int maxVolume;
+    private int minVolume = 0;
+    private int maxVolume = 100;
     private int currentVolume;
-    private int minRadioStation;
-    private int maxRadioStation;
-    private int currentRadioStation;
+    private int minRadioStation = 0;
+    private int maxRadioStation = 10;
+    private int currentRadioStation = 5;
     private boolean on;
 
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
+    public HomeRadio(int minVolume, int maxVolume, int currentVolume) {
         this.minVolume = minVolume;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public void setMaxVolume(int maxVolume) {
         this.maxVolume = maxVolume;
+        this.currentVolume = currentVolume;
+
+
+    }
+    public HomeRadio(boolean on, int minRadioStation,
+                     int maxRadioStation, int currentRadioStation) {
+        this.on = on;
+        this.minRadioStation = minRadioStation;
+        this.maxRadioStation = maxRadioStation;
+        this.currentRadioStation = currentRadioStation;
+
     }
 
-    public int getCurrentVolume() {
-        return currentVolume;
+
+
+    public HomeRadio() {
     }
+
+    public int getMaxRadioStation() {
+        return maxRadioStation;
+    }
+    public void setMaxRadioStation() {
+        this.maxRadioStation = maxRadioStation;
+    }
+
 
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume >= maxVolume) {
@@ -40,26 +49,6 @@ public class HomeRadio {
             return;
         }
         this.currentVolume = currentVolume;
-    }
-
-    public int getMinRadioStation() {
-        return minRadioStation;
-    }
-
-    public void setMinRadioStation(int minRadioStation) {
-        this.minRadioStation = minRadioStation;
-    }
-
-    public int getMaxRadioStation() {
-        return maxRadioStation;
-    }
-
-    public void setMaxRadioStation(int maxRadioStation) {
-        this.maxRadioStation = maxRadioStation;
-    }
-
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
     }
 
 
